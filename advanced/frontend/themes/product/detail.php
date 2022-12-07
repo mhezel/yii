@@ -28,8 +28,6 @@ $this->title = 'Product Detail';
                 <?=Html::label('Title','prefix',[]) ?>
                 <?= Html::dropDownList('prefix',null,['mr'=>'Mr','mrs'=>'Mrs','master'=>'Master']) ?>
             </div>
-
-
             <?= Html::endForm() ?>
 
         </div>

@@ -28,12 +28,13 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
     <?=$this->render('header')?>
         <div class="container">
+            <?=$this->render('banner')?>
             <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],])?>
             <?= Alert::widget() ?>
             <?= $content?>
         </div>
-    <?=$this->render('footer')?>
 
+    <?=$this->render('footer')?>
 <?php $this->endBody() ?>
 </html>
 <?php $this->endPage();

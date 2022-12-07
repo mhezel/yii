@@ -4,10 +4,10 @@ use yii\web\Controller;
 use Yii;
 use yii\filters\AccessControl;
 
-class ProductController extends Controller{
+class ProjectsController extends Controller{
 
-   public function behaviors() //providing access control to the view from the controller -> behavior authentication
-   {
+    /*public function behaviors() //providing access control to the view from the controller -> behavior authentication
+    {
         return[
             'access'=>[
                 'class'=>AccessControl::classname(),
@@ -21,17 +21,9 @@ class ProductController extends Controller{
                 ]
             ]
         ];
+    }*/
+    public function actionIndex()
+    {
+        return $this->render('index');
     }
-    public function actionIndex(){
-        $productview = 'category';
-        return $this->render('index',['productview'=>$productview]);
-    }
-
-    public function actionDetail($id,$name){
-
-
-
-        return $this->render('detail',['id'=>$id,'name'=>$name]);
-    }
-
 }
