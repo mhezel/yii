@@ -13,20 +13,17 @@ use yii\helpers\html;
 								<li>
 									<a href="<?=Url::to(['/projects/index'])?>">Projects</a>
                                         <ul>
-                                                <li><a href="#">Lorem ipsum dolor</a></li>
-                                                <li><a href="#">Magna phasellus</a></li>
-                                                <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li><a href="<?=Url::to(['/projects/create'])?>">Add a Project</a></li>
                                                     <li>
-                                                        <a href="#">Phasellus consequat</a>
+                                                        <a href="<?=Url::to(['/projects/index'])?>">Projects</a>
                                                             <ul>
-                                                                <li><a href="#">Magna phasellus</a></li>
-                                                                <li><a href="#">Etiam dolore nisl</a></li>
-                                                                <li><a href="#">Veroeros feugiat</a></li>
-                                                                <li><a href="#">Nisl sed aliquam</a></li>
-                                                                <li><a href="#">Dolore adipiscing</a></li>
+                                                                <li><a href="#">Project 1</a></li>
+                                                                <li><a href="#">Project 2</a></li>
+                                                                <li><a href="#">Project 3</a></li>
+                                                                <li><a href="#">Project 4</a></li>
+                                                                <li><a href="#">Project 5</a></li>
                                                             </ul>
                                                     </li>
-                                                <li><a href="#">Veroeros feugiat</a></li>
                                         </ul>
                                 <li><a href="<?=Url::to(['/site/about'])?>">About</a></li>
                                 <li><a href="<?=Url::to(['/site/contact'])?>">Contact</a></li>
