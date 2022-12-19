@@ -40,6 +40,7 @@ use yii\helpers\Url;
                             <li><a href="#" class="button alt">Find out more</a></li>
                         </ul>
                     </footer>
+
                 </section>
             </div>
             <div class="col-4 col-6-medium col-12-small">
