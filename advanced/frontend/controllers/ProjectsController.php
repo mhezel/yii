@@ -30,7 +30,9 @@ class ProjectsController extends Controller{
         $model = new Projects();
         if($model->load(Yii::$app->request->post())){
             $model->posted_by = Yii::$app->user->identity->getId();
-            $model->save(false);
+            if($model->save(false)){
+                return $this->redirect(['view','id'=>$id]);
+            }
         }
         return $this->render('create', [
             'model' => $model
@@ -43,6 +45,27 @@ class ProjectsController extends Controller{
             'model' => $model
         ]);
     }
+    public function actionUpdate($id)
+    {
+        $model = Projects::findOne(['id'=>$id]);
+        if($model->load(Yii::$app->request->post())){
+            $model->posted_by = Yii::$app->user->identity->getId();
+            if($model->save(false)){
+                return $this->redirect(['view','id'=>$id]);
+            }
+        }
+        return $this->render('update', [
+            'model' => $model
+        ]);
+    }
+    public function actionDelete($id)
+    {
+        if (Projects::find()->where(['id'=>$id])->exists()){
+           $model = Projects::find()->where(['id'=>$id])->one();
+           if($model->delete()){
+               return $this->redirect(['index']);
+           }
+        }
+    }
 }
-
 ?>

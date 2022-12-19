@@ -15,7 +15,7 @@ use yii\helpers\html;
                                         <ul>
                                             <li><a href="<?=Url::to(['/projects/create'])?>">Add a Project</a></li>
                                                     <li>
-                                                        <a href="<?=Url::to(['/projects/index'])?>">Projects</a>
+                                                        <a href="<?=Url::to(['/projects/index'])?>">View Projects</a>
                                                             <ul>
                                                                 <li><a href="#">Project 1</a></li>
                                                                 <li><a href="#">Project 2</a></li>

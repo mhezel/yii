@@ -72,8 +72,9 @@ use yii\helpers\Url;
                             <p><?=$projects->body?></p>
                             <footer>
                                 <ul class="actions">
-                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">Find out more</a></li>
-                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">View</a></li>
+                                    <li><a href="<?=Url::to(['update','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
+                                    <li><a href="<?=Url::to(['delete','id'=>$projects->id])?>"class="btn btn-danger btn-sm">Delete Project</a></li>
                                 </ul>
                             </footer>
                         </section>
@@ -90,8 +91,9 @@ use yii\helpers\Url;
                             <p><?=$projects->body?></p>
                             <footer>
                                 <ul class="actions">
-                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">Find out more</a></li>
-                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">View</a></li>
+                                    <li><a href="<?=Url::to(['update','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
+                                    <li><a href="<?=Url::to(['delete','id'=>$projects->id])?>"class="btn btn-danger btn-sm">Delete Project</a></li>
                                 </ul>
                             </footer>
                         </section>
