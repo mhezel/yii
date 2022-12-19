@@ -56,48 +56,6 @@ use yii\helpers\Url;
                     </footer>
                 </section>
             </div>
-            <div class="col-4 col-6-medium col-12-small">
-                <section class="box">
-                    <a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-                    <header>
-                        <h3>Blandit sed adipiscing</h3>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="#" class="button alt">Find out more</a></li>
-                        </ul>
-                    </footer>
-                </section>
-            </div>
-            <div class="col-4 col-6-medium col-12-small">
-                <section class="box">
-                    <a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-                    <header>
-                        <h3>Etiam nisl consequat</h3>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="#" class="button alt">Find out more</a></li>
-                        </ul>
-                    </footer>
-                </section>
-            </div>
-            <div class="col-4 col-6-medium col-12-small">
-                <section class="box">
-                    <a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-                    <header>
-                        <h3>Dolore nisl feugiat</h3>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="#" class="button alt">Find out more</a></li>
-                        </ul>
-                    </footer>
-                </section>
-            </div>
             <div>
                 <?php
                 $counter = 1;
@@ -114,7 +72,8 @@ use yii\helpers\Url;
                             <p><?=$projects->body?></p>
                             <footer>
                                 <ul class="actions">
-                                    <li><a href="#" class="button alt">Find out more</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">Find out more</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
                                 </ul>
                             </footer>
                         </section>
@@ -131,7 +90,8 @@ use yii\helpers\Url;
                             <p><?=$projects->body?></p>
                             <footer>
                                 <ul class="actions">
-                                    <li><a href="#" class="button alt">Find out more</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">Find out more</a></li>
+                                    <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-secondary btn-sm">Update Project</a></li>
                                 </ul>
                             </footer>
                         </section>

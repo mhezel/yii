@@ -28,9 +28,6 @@ class ProductController extends Controller{
     }
 
     public function actionDetail($id,$name){
-
-
-
         return $this->render('detail',['id'=>$id,'name'=>$name]);
     }
 

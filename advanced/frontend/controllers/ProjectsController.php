@@ -36,6 +36,13 @@ class ProjectsController extends Controller{
             'model' => $model
         ]);
     }
+    public function actionView($id)
+    {
+        $model = Projects::findOne(['id'=>$id]);
+        return $this->render('view', [
+            'model' => $model
+        ]);
+    }
 }
 
 ?>
