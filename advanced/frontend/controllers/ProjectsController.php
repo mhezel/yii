@@ -25,7 +25,10 @@ class ProjectsController extends Controller{
     public function actionIndex()
     {
         $user_id = Yii::$app->user->identity->getId();
-        $model = Projects::find()->where(['posted_by'=>$user_id])->all();
+        $model = Projects::find()->where(['posted_by'=>$user_id])
+                                 ->orderBy('rand()')
+                                 ->all();
+
         return $this->render('index',['model'=>$model]);
     }
     public function actionCreate()
@@ -45,6 +48,7 @@ class ProjectsController extends Controller{
     {
         $user_id = Yii::$app->user->identity->getId();
         $model = Projects::findOne(['id'=>$id,'posted_by'=>$user_id]);
+
         return $this->render('view', [
             'model' => $model
         ]);

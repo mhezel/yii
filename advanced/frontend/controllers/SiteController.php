@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use app\models\Projects;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -75,7 +76,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $project = Projects::find()->all();
+        return $this->render('index',['project'=>$project]);
     }
 
     /**

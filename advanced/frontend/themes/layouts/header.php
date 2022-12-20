@@ -5,11 +5,11 @@ use yii\helpers\html;
 <!-- Header -->
         <section id="header">
 					<!-- Logo -->
-						<h1><a href="<?=Url::base()?>">Mhezel Mohammad</a></h1>
+						<h1><a href="<?=Url::to(['/site/index'])?>">Mhezel Mohammad</a></h1>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-                                <li class="current"><a href="<?=Url::base()?>">Home</a></li>
+                                <li class="current"><a href="<?=Url::to(['/site/index'])?>">Home</a></li>
 								<li><a href="<?=Url::to(['/projects/index'])?>">Projects</a>
                                         <ul>
                                             <li><a href="<?=Url::to(['/projects/create'])?>">Add a Project</a></li>

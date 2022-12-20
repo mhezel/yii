@@ -2,7 +2,10 @@
 /** @var yii\web\View $this */
 use yii\helpers\Url;
 $this->title = 'My Website Application';?>
-	<body class="homepage is-preload">
+<body>
+    <div class="container">
+        <?=$this->render('banner')?>
+    </div>
 		<!--<div id="page-wrapper">
 			 Main
 			<section id="main">
@@ -20,6 +23,6 @@ $this->title = 'My Website Application';?>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
+

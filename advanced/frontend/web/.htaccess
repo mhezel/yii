@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %(REQUEST_FILENAME} !-f
+RewriteCond %(REQUEST_FILENAME} !-d
+
+RewriteRule ^[^/]+/([^.]+\.(?:js|css|jpe?g|png|gif))$ /$1 [L,R=301,NC]
+RewriteRule . index.php
