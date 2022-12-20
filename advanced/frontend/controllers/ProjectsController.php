@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 use app\models\Projects;
+use common\models\User;
 use Faker\Factory;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -47,11 +48,17 @@ class ProjectsController extends Controller{
     public function actionView($id)
     {
         $user_id = Yii::$app->user->identity->getId();
-        $model = Projects::findOne(['id'=>$id,'posted_by'=>$user_id]);
-
-        return $this->render('view', [
-            'model' => $model
-        ]);
+        $model = Projects::findOne(['id'=>$id, 'posted_by'=>$user_id]);
+        $username = User::findOne(['id'=>$user_id])->username;
+        //$cls_Model = new Projects();
+//        echo $user_id;
+       // echo '<pre>';
+        //var_dump($cls_Model);
+        //echo '</pre>';
+    return $this->render('view', [
+            'model' => $model,
+            'username' => $username
+       ]);
     }
     public function actionUpdate($id)
     {
@@ -85,7 +92,7 @@ class ProjectsController extends Controller{
             $projects->id = null;
             $projects->posted_by = rand(5,8);
             $projects->title = $faker->words(random_int(1,3),true);
-            $projects->body = $faker->paragraph(random_int(1,4));
+            $projects->body = $faker->paragraph(random_int(2,10));
             $projects->save(false);
         }
     }

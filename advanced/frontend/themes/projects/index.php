@@ -6,6 +6,7 @@ use yii\helpers\Html;
 use yii\filters\AccessControl;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
+use frontend\components\SmallBody;
 ?>
 <h1>Welcome to Projects</h1>
 <section>
@@ -70,7 +71,7 @@ use yii\helpers\Url;
                             <header>
                                 <h3><?=$projects->title?></h3>
                             </header>
-                            <p><?=$projects->body?></p>
+                            <?=SmallBody::widget(['body'=>$projects->body,'count'=>8])?>
                             <footer>
                                 <ul class="actions">
                                     <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">View</a></li>
@@ -89,7 +90,7 @@ use yii\helpers\Url;
                             <header>
                                 <h3><?=$projects->title?></h3>
                             </header>
-                            <p><?=$projects->body?></p>
+                            <?=SmallBody::widget(['body'=>$projects->body,'count'=>8])?>
                             <footer>
                                 <ul class="actions">
                                     <li><a href="<?=Url::to(['view','id'=>$projects->id])?>"class="btn btn-primary btn-sm">View</a></li>

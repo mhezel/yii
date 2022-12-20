@@ -1,5 +1,6 @@
 <?php
 namespace app\models;
+use common\models\User;
 use Yii;
 
 /**
@@ -50,4 +51,5 @@ class Projects extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
         ];
     }
+
 }
