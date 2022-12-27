@@ -1,5 +1,8 @@
 <?php
 namespace frontend\controllers;
+use app\models\Projects;
+use common\models\User;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use Yii;
 use yii\filters\AccessControl;
@@ -23,10 +26,21 @@ class ProductController extends Controller{
         ];
     }
     public function actionIndex(){
-        $productview = 'category';
-        return $this->render('index',['productview'=>$productview]);
+        //$productview = 'category';
+        //return $this->render('index',['productview'=>$productview]);
+        $user_id = Yii::$app->user->identity->getId();
+        $username = User::findOne(['id'=>$user_id])->username;
+        $model = new ActiveDataProvider([
+                'query'=>Projects::find()->where(['posted_by'=>$user_id]),
+                'pagination'=>[
+                    'pageSize'=>20
+                ]
+        ]);
+        return $this->render('index',[
+            'model'=>$model,
+            'username'=>$username
+            ]);
     }
-
     public function actionDetail($id,$name){
         return $this->render('detail',['id'=>$id,'name'=>$name]);
     }
