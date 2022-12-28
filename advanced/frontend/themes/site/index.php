@@ -1,11 +1,21 @@
 <?php
 /** @var yii\web\View $this */
+use yii\widgets\ListView;
 use yii\helpers\Url;
-$this->title = 'My Website Application';?>
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+;?>
 <body>
-    <div class="container">
-        <?=$this->render('banner')?>
-    </div>
+        <div class="container">
+            <div class="row">
+            <h2>Projects in List View</h2>
+            <?php echo ListView::widget([
+                'dataProvider'=>$model,
+                'itemView'=>'_project'
+            ])
+            ?>
+            </div>
+        </div>
 		<!--<div id="page-wrapper">
 			 Main
 			<section id="main">

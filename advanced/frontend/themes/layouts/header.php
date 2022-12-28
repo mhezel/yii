@@ -13,7 +13,7 @@ use yii\helpers\html;
 								<li><a href="<?=Url::to(['/projects/index'])?>">Projects</a>
                                         <ul>
                                             <li><a href="<?=Url::to(['/projects/create'])?>">Add a Project</a></li>
-                                            <li><a href="<?=Url::to(['/projects/index'])?>">View Projects</a></li>
+                                            <li><a href="<?=Url::to(['/projects/index'])?>">View My Projects</a></li>
                                         </ul>
                                 <li><a href="<?=Url::to(['/site/about'])?>">About</a></li>
                                 <li><a href="<?=Url::to(['/site/contact'])?>">Contact</a></li>

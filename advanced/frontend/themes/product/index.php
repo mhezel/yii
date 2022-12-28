@@ -18,21 +18,19 @@ use yii\grid\GridView;
             'dataProvider'=>$model,
             'columns'=>[
                     ['class'=>'yii\grid\SerialColumn'],
-
                     [
                             'attribute'=>'posted_by',
-                            'value'=>$username
+                            'value'=>'',
                     ],
                     'title',
                     [
                            'attribute'=>'created_at',
                             'format'=>['date']
-                    ]
+                    ],
+                    ['class'=>'yii\grid\ActionColumn'],
             ]
-
-    ])
+    ]);
     ?>
-
 </div>
 
 

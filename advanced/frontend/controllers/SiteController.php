@@ -2,11 +2,13 @@
 
 namespace frontend\controllers;
 
+use common\models\User;
 use app\models\Projects;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\data\ActiveDataProvider;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -74,12 +76,19 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
-    {
-        $project = Projects::find()->all();
-        return $this->render('index',['project'=>$project]);
+    public function actionIndex(){
+        //$productview = 'category';
+        //return $this->render('index',['productview'=>$productview]);
+        $model = new ActiveDataProvider([
+            'query'=>Projects::find()->where('posted_by != 0 and posted_by != ""'),
+            'pagination'=>[
+                'pageSize'=>20,
+            ]
+        ]);
+        return $this->render('index',[
+            'model'=>$model,
+        ]);
     }
-
     /**
      * Logs in a user.
      *

@@ -96,5 +96,10 @@ class ProjectsController extends Controller{
             $projects->save(false);
         }
     }
+    public function actionUser($id)
+    {
+        $user = User::findOne(['id'=>$id]);
+        return $this->render('user',['user'=>$user]);
+    }
 }
 ?>

@@ -22,11 +22,19 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title)?> Mhezel Mohammad</title>
     <?php $this->head()?>
 </head>
-<?=$this->render('header')?>
-<?php $this->beginBody() ?>
-        <div class="container">
-            <?= $content?>
-        </div>
+<main role="main" class="flex-shrink-0">
+    <?=$this->render('header')?>
+    <div class="container">
+        <?= $content ?>
+    </div>
+</main>
+<footer class="footer mt-auto py-3 text-muted">
+    <div class="container">
+        <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="float-end"><?= Yii::powered() ?></p>
+    </div>
+</footer>
 <?php $this->endBody() ?>
+</body>
 </html>
 <?php $this->endPage();

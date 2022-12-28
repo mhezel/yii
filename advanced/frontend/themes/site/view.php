@@ -1,4 +1,3 @@
-<!-- Projects View -->
 <?php
 /** @var yii\web\View $this */
 
@@ -32,6 +31,3 @@ use yii\widgets\DetailView;
     ]);
     ?>
     </div>
-    <!--<h3>/*=$model->title?></h3>
-        <p>/*$model->body?></p>
-        <a>posted by:/*$username?></a>-->

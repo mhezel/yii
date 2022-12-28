@@ -51,5 +51,8 @@ class Projects extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
         ];
     }
+    public function getUser(){
+        return $this->hasOne(\frontend\models\User::className(),['id'=>'posted_by']);
+    }
 
 }
