@@ -11,7 +11,7 @@ use yii\widgets\DetailView;
 ?>
 <section>
     <header class="major">
-        <h2>Projects</h2>
+        <h2>Projects Gallery</h2>
     </header>
     <div class="container text-justify">
     <?php

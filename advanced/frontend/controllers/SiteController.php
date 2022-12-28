@@ -89,7 +89,26 @@ class SiteController extends Controller
             'model'=>$model,
         ]);
     }
-    /**
+    public function actionView($id)
+    {
+
+        $user_id = Yii::$app->user->identity->getId();
+        $user = Projects::findOne(['id' => $id, 'posted_by' => $user_id]);
+        //$cls_Model = new Projects();
+//        echo $user_id;
+        // echo '<pre>';
+        //var_dump($cls_Model);
+        //echo '</pre>';
+
+        echo $user_id;
+        echo $id;
+
+
+        return $this->render('view', [
+            'user' => $user,
+        ]);
+    }
+        /**
      * Logs in a user.
      *
      * @return mixed

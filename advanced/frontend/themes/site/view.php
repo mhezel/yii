@@ -1,3 +1,4 @@
+<!-- Projects View -->
 <?php
 /** @var yii\web\View $this */
 
@@ -8,26 +9,34 @@ use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 ?>
-<section>
-    <header class="major">
-        <h2>Projects</h2>
-    </header>
-    <div class="container text-justify">
-    <?php
-    echo DetailView::widget([
-            'model'=>$model,
-            'attributes'=>[
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <td><?= $user->id ?></td>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <td><?= $user->username ?></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><?= $user->email ?></td>
+        </tr>
+    </table>
+            <?php
+            echo DetailView::widget([
+                'model'=>$model,
+                'attributes'=>[
                     'title',
                     'body',
                     [
-                           'attribute'=>'created_at',
-                            'format'=>'date'
+                        'attribute'=>'created_at',
+                        'format'=>'date'
                     ],
-                    [
-                           'attribute'=>'posted_by',
-                            'value'=>$model->user->username,
-                    ]
-            ]
-    ]);
-    ?>
-    </div>
+                    'project.name',
+                ]
+            ]);
+            ?>
+        </div>
+</div>
