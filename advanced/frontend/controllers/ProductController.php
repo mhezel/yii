@@ -14,8 +14,6 @@ class ProductController extends Controller{
         return[
             'access'=>[
                 'class'=>AccessControl::classname(),
-                //'only'=>['detail'],
-                'except'=>['index'],
                 'rules'=>[
                     [
                         'allow'=>true,

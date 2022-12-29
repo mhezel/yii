@@ -17,7 +17,7 @@ use yii\widgets\DetailView;
                     'body',
                     [
                         'attribute'=>'created_at',
-                        'format'=>'date'
+                        'format'=>['date']
                     ],
                     [
                         'attribute'=>'posted_by',
