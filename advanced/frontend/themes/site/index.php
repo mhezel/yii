@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ;?>
 <body>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
             <h2>Projects in List View</h2>
             <?php echo ListView::widget([
