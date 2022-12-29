@@ -2,13 +2,17 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use frontend\components\SmallBody;
+
+$model->created_at = date('F d, Y',strtotime($model->created_at));
+
+
 ?>
 <div class="card" style="width: 50rem">
         <section class="card-body">
             <h2><a href="<?=Url::to(['/site/view','id'=>$model->id])?>"><?=$model->title?></a></h2>
             <p><?= SmallBody::widget(['body' => $model->body, 'count' => 50]) ?></p>
                 <footer class="card-text">Posted by
-                <a href="<?= Url::to(['/posts/user', 'id' => $model->posted_by]) ?>"><?= $model->user->username?></a> on <?= $model->created_at ?>
+                <a href="<?= Url::to(['/posts/user', 'id' => $model->posted_by]) ?>"><?= $model->user->username?></a> on <?= $model->created_at?>
                 </footer>
         </section>
 </div>

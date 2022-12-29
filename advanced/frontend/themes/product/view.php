@@ -21,7 +21,7 @@ use yii\widgets\DetailView;
                     'title',
                     'body',
                     [
-                           'attribute'=>'created_at',
+                            'attribute'=>'created_at',
                             'format'=>'date'
                     ],
                     [
