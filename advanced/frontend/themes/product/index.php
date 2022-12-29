@@ -11,7 +11,6 @@ use yii\grid\GridView;
 <div class="container">
     <?php /*$this->render('partialview',['productview'=>$productview]) */?>
     <h2>List of Projects in GridView</h2>
-        <?php echo $username ?>
         <a href="<?=Url::to(['create.php'])?>" class="btn btn-success fa-pull-right">Create Project</a>
     <?php
     echo GridView::widget([

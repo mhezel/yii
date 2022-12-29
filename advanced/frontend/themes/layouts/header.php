@@ -9,7 +9,7 @@ use yii\helpers\html;
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-                                <li class="current"><a href="<?=Url::to(['/site/index'])?>">Home</a></li>
+                                <li><a href="<?=Url::to(['/site/index'])?>">Home</a></li>
 								<li><a href="<?=Url::to(['/projects/index'])?>">Projects</a>
                                         <ul>
                                             <li><a href="<?=Url::to(['/projects/create'])?>">Add a Project</a></li>
