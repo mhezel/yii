@@ -7,6 +7,7 @@ use yii\helpers\Url;
 use yii\web\Controller;
 use Yii;
 use yii\filters\AccessControl;
+use yii\web\UploadedFile;
 
 class ProjectsController extends Controller{
     public function behaviors() //providing access control to the view from the controller -> behavior authentication
@@ -37,6 +38,9 @@ class ProjectsController extends Controller{
         $model = new Projects();
         if($model->load(Yii::$app->request->post())){
             $model->posted_by = Yii::$app->user->identity->getId();
+            $image = UploadedFile::getInstance($model,'image');
+            $image->saveAs('images/upload/'.$image->baseName.'.'.$image->extension);
+            $model->image = $image->baseName.'.'.$image->extension;
             if($model->save(false)){
                 return $this->redirect(['view','id'=>$model->id]);
             }
@@ -66,6 +70,9 @@ class ProjectsController extends Controller{
         $model = Projects::findOne(['id'=>$id,'posted_by'=>$user_id]);
         if($model->load(Yii::$app->request->post())){
             $model->posted_by = Yii::$app->user->identity->getId();
+            $image = UploadedFile::getInstance($model,'image');
+            $image->saveAs('images/upload/'.$image->baseName.'.'.$image->extension);
+            $model->image = $image->baseName.'.'.$image->extension;
             if($model->save(false)){
                 return $this->redirect(['view','id'=>$id]);
             }

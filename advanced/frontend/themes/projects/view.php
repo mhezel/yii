@@ -27,7 +27,12 @@ use yii\widgets\DetailView;
                     [
                            'attribute'=>'posted_by',
                             'value'=>$model->user->username,
-                    ]
+                    ],
+                    [
+                        'attribute'=>'image',
+                        'value'=>'/images/upload/' .$model->image,
+                        'format' => ['image',['width'=>'230','height'=>'200']],
+                    ],
             ]
     ]);
     ?>

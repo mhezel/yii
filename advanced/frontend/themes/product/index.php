@@ -20,7 +20,9 @@ use yii\grid\GridView;
                     ['class'=>'yii\grid\SerialColumn'],
                     [
                             'attribute'=>'posted_by',
-                            'value'=>'',
+                            'value'=>function($model){
+                                return $model->getUserName();
+                            }
                     ],
                     'title',
                     [

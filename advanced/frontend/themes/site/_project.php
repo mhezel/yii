@@ -3,7 +3,6 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use frontend\components\SmallBody;
 ?>
-
 <div class="list-group text-justify">
     <section class="box">
         <h2 class="post-title">

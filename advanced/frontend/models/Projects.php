@@ -33,7 +33,7 @@ class Projects extends \yii\db\ActiveRecord
             [['body'], 'string'],
             [['created_at','posted_by','image'], 'safe'],
             [['posted_by', 'title'], 'string', 'max' => 100],
-            [['image'], 'string', 'max' => 200],
+            [['image'], 'file','extensions'=>'jpg,png,gif'],
         ];
     }
 
@@ -55,4 +55,15 @@ class Projects extends \yii\db\ActiveRecord
         return $this->hasOne(\frontend\models\User::className(),['id'=>'posted_by']);
     }
 
+    public function getUserName(){
+
+        $user = $this->getUser()->all();
+
+        if(count($user)){
+            return $user[0]['username'];
+        }
+
+        return 'N/A';
+
+    }
 }
