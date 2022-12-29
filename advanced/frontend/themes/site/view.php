@@ -11,7 +11,7 @@ use yii\widgets\DetailView;
 <div class="container">
             <?php
             echo DetailView::widget([
-                'user'=>$user,
+                'model'=>$model,
                 'attributes'=>[
                     'title',
                     'body',
@@ -19,7 +19,10 @@ use yii\widgets\DetailView;
                         'attribute'=>'created_at',
                         'format'=>'date'
                     ],
-                    'project.name',
+                    [
+                        'attribute'=>'posted_by',
+                        'value'=>$username,
+                    ],
                 ]
             ]);
             ?>

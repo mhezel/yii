@@ -6,7 +6,7 @@ use frontend\components\SmallBody;
 <div class="list-group text-justify">
     <section class="box">
         <h2 class="post-title">
-            <a href="<?=Url::to(['/site/view','id'=>$model->posted_by])?>"><?=$model->title?></a>
+            <a href="<?=Url::to(['/site/view','id'=>$model->id])?>"><?=$model->title?></a>
         </h2>
         <p class="post-subtitle">
             <?= SmallBody::widget(['body' => $model->body, 'count' => 50]) ?>
