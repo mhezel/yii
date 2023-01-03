@@ -96,6 +96,10 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/bootstrap-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/doctrine/deprecations" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -34,5 +34,4 @@ use yii\widgets\ActiveForm;
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 </body>
-</html>
 
