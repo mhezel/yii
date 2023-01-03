@@ -88,10 +88,9 @@
       <path value="$PROJECT_DIR$/advanced/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/advanced/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/advanced/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-widget-fileinput" />
-      <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
-      <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/bootstrap-fileinput" />
       <path value="$PROJECT_DIR$/advanced/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/advanced/vendor/2amigos/yii2-tinymce-widget" />
+      <path value="$PROJECT_DIR$/advanced/vendor/tinymce/tinymce" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

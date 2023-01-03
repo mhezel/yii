@@ -2,14 +2,14 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/backend/tests" isTestSource="true" packagePrefix="backend\tests\" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/backend/tests/_support" isTestSource="true" packagePrefix="backend\tests\" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/common/tests" isTestSource="true" packagePrefix="common\tests\" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/common/tests/_support" isTestSource="true" packagePrefix="common\tests\" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/frontend/tests" isTestSource="true" packagePrefix="frontend\tests\" />
       <sourceFolder url="file://$MODULE_DIR$/advanced/frontend/tests/_support" isTestSource="true" packagePrefix="frontend\tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phar-io/version" />
@@ -96,10 +96,9 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/log" />
-      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-fileinput" />
-      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
-      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/bootstrap-fileinput" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/2amigos/yii2-tinymce-widget" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/tinymce/tinymce" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
